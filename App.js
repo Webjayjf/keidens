@@ -2,15 +2,21 @@ import * as React from 'react';
 import { View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import SimpleText from './src/components/SimpleText';
+
 
 function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
+      <Text className="bg-black">Home Screen</Text>
+      <Button
+        title="Go to SimpleText"
+        onPress={() => navigation.push('SimpleText')}
+      />
+
       <Button
         title="Go to screen 2"
         onPress={() => navigation.navigate('Details')}
-        // onPress={() => navigation.push('Details')}
       />
     </View>
   );
@@ -32,6 +38,7 @@ function App() {
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Details" component={Details} />
+        <Stack.Screen name="SimpleText" component={SimpleText} />        
       </Stack.Navigator>
     </NavigationContainer>
   );
