@@ -3,7 +3,7 @@ import { View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SimpleText from './src/components/SimpleText';
-
+import PlayAudio from './src/PlayAudio';
 
 function HomeScreen({ navigation }) {
   return (
@@ -18,6 +18,12 @@ function HomeScreen({ navigation }) {
         title="Go to screen 2"
         onPress={() => navigation.navigate('Details')}
       />
+      
+      <Button
+        title="Go to screen audio"
+        onPress={() => navigation.navigate('PlayAudio')}
+      />
+      
     </View>
   );
 }
@@ -39,6 +45,7 @@ function App() {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Details" component={Details} />
         <Stack.Screen name="SimpleText" component={SimpleText} />        
+        <Stack.Screen name="PlayAudio" component={PlayAudio} />        
       </Stack.Navigator>
     </NavigationContainer>
   );
