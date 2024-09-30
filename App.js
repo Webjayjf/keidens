@@ -70,7 +70,8 @@ const styles = StyleSheet.create({
   logoContainer: {
     alignItems: 'center',
     marginBottom: 20,
-    backgroundColor: '#oooooo'
+    backgroundColor: '#ffffff',  // Changed to a valid background color
+    padding: 10,
   },
   logo: {
     width: 150, // Adjust size as needed
