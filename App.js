@@ -10,9 +10,9 @@ const Drawer = createDrawerNavigator();
 function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home Screen</Text>
+      
       <Button
-        title="Open Drawer"
+        title="Start Server"
         onPress={() => navigation.openDrawer()}
       />
     </View>
@@ -38,7 +38,7 @@ export default function App() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <NavigationContainer>
         <Drawer.Navigator
-          initialRouteName="Home"
+          initialRouteName="Keidens"
           screenOptions={{
             headerStyle: {
               backgroundColor: 'purple', // Set the purple background color here
@@ -49,7 +49,7 @@ export default function App() {
             },
           }}
         >
-          <Drawer.Screen name="Home" component={HomeScreen} />
+          <Drawer.Screen name="Keidens" component={HomeScreen} />
           <Drawer.Screen name="Settings" component={SettingsScreen} />
         </Drawer.Navigator>
       </NavigationContainer>
