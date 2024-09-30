@@ -1,54 +1,48 @@
-import * as React from 'react';
+import React from 'react';
 import { View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import SimpleText from './src/components/SimpleText';
-import PlayAudio from './src/PlayAudio';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
+const Drawer = createDrawerNavigator();
+
+// Home Screen
 function HomeScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text className="bg-black">Home Screen</Text>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Home Screen</Text>
       <Button
-        title="Go to SimpleText"
-        onPress={() => navigation.push('SimpleText')}
+        title="Open Drawer"
+        onPress={() => navigation.openDrawer()}
       />
-
-      <Button
-        title="Go to screen 2"
-        onPress={() => navigation.navigate('Details')}
-      />
-      
-      <Button
-        title="Go to screen audio"
-        onPress={() => navigation.navigate('PlayAudio')}
-      />
-      
     </View>
   );
 }
 
-function Details() {
+// Settings Screen
+function SettingsScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Screen 2</Text>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Settings Screen</Text>
+      <Button
+        title="Go to Home"
+        onPress={() => navigation.navigate('Home')}
+      />
     </View>
   );
 }
 
-const Stack = createNativeStackNavigator();
-
-function App() {
+// Main App with Drawer Navigation
+export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Details" component={Details} />
-        <Stack.Screen name="SimpleText" component={SimpleText} />        
-        <Stack.Screen name="PlayAudio" component={PlayAudio} />        
-      </Stack.Navigator>
-    </NavigationContainer>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <NavigationContainer>
+        <Drawer.Navigator initialRouteName="Home">
+          <Drawer.Screen name="Home" component={HomeScreen} />
+          <Drawer.Screen name="Settings" component={SettingsScreen} />
+        </Drawer.Navigator>
+      </NavigationContainer>
+    </GestureHandlerRootView>
   );
-}
-
-export default App;
+    }
+  
