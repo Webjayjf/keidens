@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Button, Image, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
+import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList } from 'react-navigation-drawer';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 const Drawer = createDrawerNavigator();
