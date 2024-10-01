@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   logo: {
-    width: 80%,  // Adjust size as needed
+    width: '80%',  // Adjust size as needed
     marginBottom: 20,
   },
   input: {
