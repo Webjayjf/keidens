@@ -15,7 +15,7 @@ const MyLayout = () => {
       {/* Footer */}
       <View style={styles.footer}>
         
-        <Image source={require('./btnc.png')} style={styles.image}  />
+        <Image source={require('./btnc.png')} style={styles.imaged}  />
       </View>
     </ScrollView>
   );
@@ -40,12 +40,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   image: {
-    width: 200,
+    width: 300,
     height: 200,
     resizeMode: 'contain',
   },
-  image: {
-    width: 100,
+  imaged: {
+    width: 70,
     height: 200,
     resizeMode: 'contain',
   },
