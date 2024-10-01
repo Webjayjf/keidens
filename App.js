@@ -12,7 +12,7 @@ const MyLayout = () => {
       {/* Image Section */}
       <View style={styles.imageSection}>
         <Image 
-          source={{ uri: 'image-url-here' }} 
+          source={{ uri: .'/keilo.png' }} 
           style={styles.image} 
         />
       </View>
