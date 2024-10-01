@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   footer: {
     padding: 20,
     backgroundColor: '#ffffff',
-    alignItems: 'start',
+    alignItems: 'center',
   },
   footerText: {
     fontSize: 16,
