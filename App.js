@@ -15,7 +15,7 @@ const App = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.innerContainer}>
-        <Image source={require('./assets/keilo.png')} style={styles.logo} />
+        <Image source={require('./keilo.png')} style={styles.logo} />
         
         <TextInput
           style={styles.input}
