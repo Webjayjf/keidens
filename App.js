@@ -7,10 +7,7 @@ const MyLayout = () => {
       
       {/* Image Section */}
       <View style={styles.imageSection}>
-        <Image 
-          source={{ uri: './keilo.png' }} 
-          style={styles.image} 
-        />
+        <Image source={require('./keilo.png')} style={styles.image} />
       </View>
 
       {/* Content Section */}
@@ -21,10 +18,7 @@ const MyLayout = () => {
       {/* Footer */}
       <View style={styles.footer}>
         <Text style={styles.footerText}>Footer Section</Text>
-        <Image 
-          source={{ uri: './btnc.png' }} 
-          style={styles.image} 
-        />
+        <Image source={require('./keilo.png')} style={styles.image}  />
       </View>
     </ScrollView>
   );
