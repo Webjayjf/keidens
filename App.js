@@ -1,58 +1,48 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 
-const Drawer = createDrawerNavigator();
-
-// Home Screen
-function HomeScreen({ navigation }) {
+const App = () => {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      
-      <Button
-        title="Start Server"
-        onPress={() => navigation.openDrawer()}
+    <View style={styles.container}>
+      <Image
+        source={{ uri: 'https://example.com/your-logo.png' }} // Replace with your logo URL
+        style={styles.logo}
       />
+      <Text style={styles.heading}>Start secure connection</Text>
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttonText}>Get Started</Text>
+      </TouchableOpacity>
     </View>
   );
-}
+};
 
-// Settings Screen
-function SettingsScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings Screen</Text>
-      <Button
-        title="Go to Home"
-        onPress={() => navigation.navigate('Home')}
-      />
-    </View>
-  );
-}
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#D3D3D3', // Light grey
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 16,
+  },
+  logo: {
+    width: 100, // Adjust size as needed
+    height: 100,
+    marginBottom: 20,
+  },
+  heading: {
+    fontSize: 24,
+    marginBottom: 20,
+  },
+  button: {
+    backgroundColor: 'purple',
+    paddingVertical: 15,
+    paddingHorizontal: 30,
+    borderRadius: 5,
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 18,
+  },
+});
 
-// Main App with Drawer Navigation and Purple Header
-export default function App() {
-  return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <NavigationContainer>
-        <Drawer.Navigator
-          initialRouteName="Keidens"
-          screenOptions={{
-            headerStyle: {
-              backgroundColor: 'purple', // Set the purple background color here
-            },
-            headerTintColor: '#fff', // Set the text color to white
-            headerTitleStyle: {
-              fontWeight: 'bold',
-            },
-          }}
-        >
-          <Drawer.Screen name="Keidens" component={HomeScreen} />
-          <Drawer.Screen name="Settings" component={SettingsScreen} />
-        </Drawer.Navigator>
-      </NavigationContainer>
-    </GestureHandlerRootView>
-  );
-}
+export default App;
