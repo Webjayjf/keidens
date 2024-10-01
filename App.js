@@ -5,7 +5,7 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Image
-        source={{ uri: 'https://example.com/your-logo.png' }} // Replace with your logo URL
+        source={{ uri: './keilogo.jpg' }} // Replace with your logo URL
         style={styles.logo}
       />
       <Text style={styles.heading}>Start secure connection</Text>
