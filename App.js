@@ -15,7 +15,7 @@ const App = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.innerContainer}>
-        <Image source={require('./keilo.png')} style={styles.logo} resizeMode="contain" />
+        <Image source={require('./keilow.png')} style={styles.logo} resizeMode="contain" />
         
         <TextInput
           style={styles.input}
@@ -28,7 +28,7 @@ const App = () => {
         
         <TextInput
           style={styles.input}
-          placeholder="Password"
+          placeholder="Country"
           value={password}
           onChangeText={setPassword}
           secureTextEntry
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#6a0dad',
   },
   innerContainer: {
     width: '80%',
@@ -55,11 +55,11 @@ const styles = StyleSheet.create({
   },
   logo: {
     width: '80%',  // Adjust size as needed
-    marginBottom: 20,
+    marginBottom: 0,
   },
   input: {
     width: '100%',
-    padding: 15,
+    padding: 10,
     borderWidth: 1,
     borderColor: '#ccc',
     borderRadius: 10,
@@ -67,13 +67,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   button: {
-    backgroundColor: '#6a0dad', // Purple color
+    backgroundColor: '#ffffff', // Purple color
     paddingVertical: 15,
     paddingHorizontal: 30,
     borderRadius: 10,
   },
   buttonText: {
-    color: '#fff',
+    color: '#6a0dad',
     fontSize: 16,
     fontWeight: 'bold',
   },
