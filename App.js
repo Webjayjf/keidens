@@ -19,7 +19,7 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#D3D3D3', // Light grey
+    backgroundColor: '#E6E6DE', // Light grey
     justifyContent: 'center',
     alignItems: 'center',
     padding: 16,
