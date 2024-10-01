@@ -15,7 +15,7 @@ const App = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.innerContainer}>
-        <Image source={require('./keilo.png')} style={styles.logo} />
+        <Image source={require('./keilo.png')} style={styles.logo} resizeMode="contain" />
         
         <TextInput
           style={styles.input}
@@ -54,16 +54,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   logo: {
-    width: 200,  // Adjust size as needed
-    height: 200, // Adjust size as needed
-    marginBottom: 40,
+    width: 80%,  // Adjust size as needed
+    marginBottom: 20,
   },
   input: {
     width: '100%',
     padding: 15,
     borderWidth: 1,
     borderColor: '#ccc',
-    borderRadius: 5,
+    borderRadius: 10,
     marginBottom: 20,
     backgroundColor: '#fff',
   },
@@ -71,7 +70,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#6a0dad', // Purple color
     paddingVertical: 15,
     paddingHorizontal: 30,
-    borderRadius: 5,
+    borderRadius: 10,
   },
   buttonText: {
     color: '#fff',
