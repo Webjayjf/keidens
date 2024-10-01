@@ -1,73 +1,48 @@
-// App.js
-import React, { useState } from 'react';
-import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
+// SplashScreen.js
+import React from 'react';
+import { View, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
-const App = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+const SplashScreen = () => {
+    const handleGetStarted = () => {
+        // Handle button press here (e.g., show a message or navigate)
+        console.log("Get Started Pressed");
+    };
 
-  const handleLogin = () => {
-    // Handle the login logic here
-    console.log('Email:', email);
-    console.log('Password:', password);
-  };
-
-  return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.innerContainer}>
-        <Image source={require('./keilo.png')} style={styles.logo} resizeMode="contain" />
-        <Image source={require('./btnc.png')} style={styles.logod} />
-        
-        
-        
-        
-        <TouchableOpacity style={styles.button} onPress={handleLogin}>
-          <Text style={styles.buttonText}>Start Connection</Text>
-        </TouchableOpacity>
-      </View>
-    </SafeAreaView>
-  );
+    return (
+        <View style={styles.container}>
+            <Image 
+                source={require('./keilo.png')} // Update the path to your logo
+                style={styles.logo}
+            />
+            <TouchableOpacity onPress={handleGetStarted} style={styles.button}>
+                <Image 
+                    source={require('./btnc.png')} // Update the path to your button image
+                    style={styles.buttonImage}
+                />
+            </TouchableOpacity>
+        </View>
+    );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#ffffff',
-  },
-  innerContainer: {
-    width: '80%',
-    alignItems: 'center',
-  },
-  logo: {
-    width: '80%',  // Adjust size as needed
-    marginBottom: 30,
-  },
-  logod: {
-    width: '70',  // Adjust size as needed
-    marginBottom: 30,
-  },
-  input: {
-    width: '100%',
-    padding: 10,
-    borderWidth: 1,
-    borderColor: '#6a0dad',
-    borderRadius: 10,
-    marginBottom: 20,
-    backgroundColor: '#fff',
-  },
-  button: {
-    backgroundColor: '#6a0dad', // Purple color
-    paddingVertical: 15,
-    paddingHorizontal: 30,
-    borderRadius: 10,
-  },
-  buttonText: {
-    color: '#ffffff',
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#ffffff', // Change to your desired background color
+    },
+    logo: {
+        width: 200, // Adjust as needed
+        height: 200, // Adjust as needed
+        marginBottom: 50,
+    },
+    button: {
+        marginTop: 20,
+    },
+    buttonImage: {
+        width: 150, // Adjust as needed
+        height: 50, // Adjust as needed
+    },
 });
 
-export default App;
+export default SplashScreen;
