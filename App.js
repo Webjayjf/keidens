@@ -16,7 +16,7 @@ const App = () => {
     <SafeAreaView style={styles.container}>
       <View style={styles.innerContainer}>
         <Image source={require('./keilo.png')} style={styles.logo} resizeMode="contain" />
-        <Image source={require('./btnc.png')} style={styles.logo} resizeMode="contain" />
+        <Image source={require('./btnc.png')} style={styles.logod} />
         
         
         
@@ -42,6 +42,10 @@ const styles = StyleSheet.create({
   },
   logo: {
     width: '80%',  // Adjust size as needed
+    marginBottom: 30,
+  },
+  logod: {
+    width: '70',  // Adjust size as needed
     marginBottom: 30,
   },
   input: {
