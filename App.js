@@ -15,7 +15,7 @@ const MyLayout = () => {
       {/* Footer */}
       <View style={styles.footer}>
         
-        <Image source={require('./btnc.png')} style={styles.imaged}  />
+        <Image source={require('./bbb.png')} style={styles.imaged}  />
       </View>
     </ScrollView>
   );
