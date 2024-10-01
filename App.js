@@ -4,15 +4,11 @@ import { View, Text, Image, StyleSheet, ScrollView } from 'react-native';
 const MyLayout = () => {
   return (
     <ScrollView style={styles.container}>
-      {/* Header */}
-      <View style={styles.header}>
-        <Text style={styles.headerText}>Header Section</Text>
-      </View>
-
+      
       {/* Image Section */}
       <View style={styles.imageSection}>
         <Image 
-          source={{ uri: 'keilo.png' }} 
+          source={{ uri: './keilo.png' }} 
           style={styles.image} 
         />
       </View>
@@ -26,7 +22,7 @@ const MyLayout = () => {
       <View style={styles.footer}>
         <Text style={styles.footerText}>Footer Section</Text>
         <Image 
-          source={{ uri: 'btnc.png' }} 
+          source={{ uri: './btnc.png' }} 
           style={styles.image} 
         />
       </View>
