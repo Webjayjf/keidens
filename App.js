@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffffff', // Change to your desired background color
     },
     logo: {
-        width: 80%, // Adjust as needed
+        width: '80%', // Adjust as needed
         marginBottom: 50,
     },
     button: {
