@@ -10,15 +10,12 @@ const MyLayout = () => {
         <Image source={require('./keilo.png')} style={styles.image} />
       </View>
 
-      {/* Content Section */}
-      <View style={styles.content}>
-        <Text style={styles.contentText}>Main Content</Text>
-      </View>
+      
 
       {/* Footer */}
       <View style={styles.footer}>
-        <Text style={styles.footerText}>Footer Section</Text>
-        <Image source={require('./keilo.png')} style={styles.image}  />
+        
+        <Image source={require('./btnc.png')} style={styles.image}  />
       </View>
     </ScrollView>
   );
@@ -43,7 +40,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   image: {
-    width: 300,
+    width: 200,
+    height: 200,
+    resizeMode: 'contain',
+  },
+  image: {
+    width: 100,
     height: 200,
     resizeMode: 'contain',
   },
@@ -56,7 +58,7 @@ const styles = StyleSheet.create({
   },
   footer: {
     padding: 20,
-    backgroundColor: '#f8f8f8',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
   },
   footerText: {
