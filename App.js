@@ -1,47 +1,82 @@
-import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
+// App.js
+import React, { useState } from 'react';
+import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
 
 const App = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = () => {
+    // Handle the login logic here
+    console.log('Email:', email);
+    console.log('Password:', password);
+  };
+
   return (
-    <View style={styles.container}>
-      <Image
-        source={{ uri: './keilogo.jpg' }} // Replace with your logo URL
-        style={styles.logo}
-      />
-      <Text style={styles.heading}>Start secure connection</Text>
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Get Started</Text>
-      </TouchableOpacity>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.innerContainer}>
+        <Image source={require('./assets/keilo.png')} style={styles.logo} />
+        
+        <TextInput
+          style={styles.input}
+          placeholder="Email"
+          value={email}
+          onChangeText={setEmail}
+          keyboardType="email-address"
+          autoCapitalize="none"
+        />
+        
+        <TextInput
+          style={styles.input}
+          placeholder="Password"
+          value={password}
+          onChangeText={setPassword}
+          secureTextEntry
+        />
+        
+        <TouchableOpacity style={styles.button} onPress={handleLogin}>
+          <Text style={styles.buttonText}>Start Connection</Text>
+        </TouchableOpacity>
+      </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#E6E6DE', // Light grey
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 16,
+    backgroundColor: '#f5f5f5',
+  },
+  innerContainer: {
+    width: '80%',
+    alignItems: 'center',
   },
   logo: {
-    width: 100, // Adjust size as needed
-    height: 100,
-    marginBottom: 20,
+    width: 200,  // Adjust size as needed
+    height: 200, // Adjust size as needed
+    marginBottom: 40,
   },
-  heading: {
-    fontSize: 24,
+  input: {
+    width: '100%',
+    padding: 15,
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 5,
     marginBottom: 20,
+    backgroundColor: '#fff',
   },
   button: {
-    backgroundColor: '#8953FF',
+    backgroundColor: '#6a0dad', // Purple color
     paddingVertical: 15,
     paddingHorizontal: 30,
     borderRadius: 5,
   },
   buttonText: {
-    color: 'white',
-    fontSize: 18,
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });
 
