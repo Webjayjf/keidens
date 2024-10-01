@@ -16,23 +16,10 @@ const App = () => {
     <SafeAreaView style={styles.container}>
       <View style={styles.innerContainer}>
         <Image source={require('./keilo.png')} style={styles.logo} resizeMode="contain" />
+        <Image source={require('./btnc.png')} style={styles.logo} resizeMode="contain" />
         
-        <TextInput
-          style={styles.input}
-          placeholder="Email"
-          value={email}
-          onChangeText={setEmail}
-          keyboardType="email-address"
-          autoCapitalize="none"
-        />
         
-        <TextInput
-          style={styles.input}
-          placeholder="Country"
-          value={password}
-          onChangeText={setPassword}
-          secureTextEntry
-        />
+        
         
         <TouchableOpacity style={styles.button} onPress={handleLogin}>
           <Text style={styles.buttonText}>Start Connection</Text>
@@ -55,7 +42,7 @@ const styles = StyleSheet.create({
   },
   logo: {
     width: '80%',  // Adjust size as needed
-    marginBottom: 10,
+    marginBottom: 30,
   },
   input: {
     width: '100%',
