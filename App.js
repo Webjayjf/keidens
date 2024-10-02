@@ -1,6 +1,6 @@
 // App.js
 import React, { useState } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import HomeScreen from './HomeScreen';
 import DetailScreen from './DetailScreen';
 
@@ -13,6 +13,7 @@ const App = () => {
 
   return (
     <View style={styles.container}>
+  <Text>testing 123</Text>
       {currentScreen === 'Home' && <HomeScreen navigate={navigate} />}
       {currentScreen === 'Detail' && <DetailScreen navigate={navigate} />}
     </View>
