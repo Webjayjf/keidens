@@ -1,12 +1,21 @@
-// DetailScreen.js
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, ActivityIndicator, StyleSheet } from 'react-native';
 
-const DetailScreen = ({ navigate }) => (
-  <View>
-    <Text>Detail Screen</Text>
-    <Button title="Go Back" onPress={() => navigate('Home')} />
-  </View>
-);
+const DetailScreen = () => {
+  return (
+    <View style={styles.container}>
+      <ActivityIndicator size="large" color="#ffffff" />
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'purple',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
 
 export default DetailScreen;
