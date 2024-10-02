@@ -15,7 +15,7 @@ const HomeScreen = ({ navigate }) => {
       {/* Footer */}
       <View style={styles.footer}>
 
-<TouchableOpacity onPress={handlePress}>
+<TouchableOpacity onPress={() => navigate('Detail')}>
        <Image source={require('./bbb.png')} style={styles.imaged}  />
       </TouchableOpacity>
 
