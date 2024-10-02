@@ -13,7 +13,7 @@ const App = () => {
 
   return (
     <View style={styles.container}>
-  <Text>testing 123</Text>
+  
       {currentScreen === 'Home' && <HomeScreen navigate={navigate} />}
       {currentScreen === 'Detail' && <DetailScreen navigate={navigate} />}
     </View>
@@ -22,9 +22,7 @@ const App = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    flex: 1
   },
 });
 
