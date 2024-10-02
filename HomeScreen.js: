@@ -14,8 +14,11 @@ const HomeScreen = ({ navigate }) => {
 
       {/* Footer */}
       <View style={styles.footer}>
-        
-        <Image source={require('./bbb.png')} style={styles.imaged}  />
+
+<TouchableOpacity onPress={handlePress}>
+       <Image source={require('./bbb.png')} style={styles.imaged}  />
+      </TouchableOpacity>
+
       </View>
     </ScrollView>
   );
