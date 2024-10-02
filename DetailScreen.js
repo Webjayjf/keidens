@@ -12,7 +12,7 @@ const DetailScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'purple',
+    backgroundColor: '#8D51FF',
     justifyContent: 'center',
     alignItems: 'center',
   },
