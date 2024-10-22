@@ -24,11 +24,14 @@ const App = () => {
 
   return (
     <View>
-    
+    <Image
+        style={styles.buttonImage}
+        source={require('./keilo.png')}  // Replace with your local image path
+      />
     <TouchableOpacity onPress={handlePress}>
       <Image
         style={styles.buttonImage}
-        source={require('./assets/your-image.png')}  // Replace with your local image path
+        source={require('./bbb.png')}  // Replace with your local image path
       />
     </TouchableOpacity>
 
