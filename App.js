@@ -10,7 +10,7 @@ const App = () => {
     allowedIPs: ['0.0.0.0/0'],
   });
 
-  useEffect(() => {
+  const handlePress = () => {
     // Initialize WireGuard
     WireGuard.init(wgConfig);
 
@@ -20,12 +20,12 @@ const App = () => {
     }).catch((error) => {
       console.error('Error establishing connection:', error);
     });
-  }, []);
+  };
 
   return (
     <View>
     <Image
-        style={styles.buttonImage}
+        style={styles.logoImage}
         source={require('./keilo.png')}  // Replace with your local image path
       />
     <TouchableOpacity onPress={handlePress}>
