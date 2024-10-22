@@ -4,7 +4,7 @@ import WireGuard from 'react-native-wireguard';
 
 const App = () => {
   const [wgConfig, setWgConfig] = useState({
-    privateKey: 'your_private_key',
+    privateKey: 'iEZjzCP/YGJIyNOQSVYiAh/a/8aK4FMJLC3GLKFsWlk=',
     publicKey: 'your_public_key',
     endpoint: 'your_vps_ip:51820',
     allowedIPs: ['0.0.0.0/0'],
