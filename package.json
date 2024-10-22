@@ -11,8 +11,8 @@
   "dependencies": {
     "@expo/metro-runtime": "~3.2.3",
     "expo": "^48.0.0",
-    "react-native": "0.71.0",  // React Native version corresponding to Expo SDK 48
-    "react-native-wireguard": "^1.0.0"  // Add react-native-wireguard dependency
+    "react-native": "0.71.0", 
+    "react-native-wireguard": "^1.0.0" 
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
