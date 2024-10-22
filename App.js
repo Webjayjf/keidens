@@ -24,6 +24,14 @@ const App = () => {
 
   return (
     <View>
+    
+    <TouchableOpacity onPress={handlePress}>
+      <Image
+        style={styles.buttonImage}
+        source={require('./assets/your-image.png')}  // Replace with your local image path
+      />
+    </TouchableOpacity>
+
       <Text>Secure Connection Established!</Text>
     </View>
   );
