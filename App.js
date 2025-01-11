@@ -22,22 +22,45 @@ const App = () => {
     });
   };
 
-  return (
-    <View>
-    <Image
-        style={styles.logoImage}
-        source={require('./keilo.png')}  // Replace with your local image path
-      />
-    <TouchableOpacity onPress={handlePress}>
-      <Image
-        style={styles.buttonImage}
-        source={require('./bbb.png')}  // Replace with your local image path
-      />
-    </TouchableOpacity>
+  
 
-      <Text>Secure Connection Established!</Text>
+const App = () => {
+  return (
+    <View style={styles.screen1}>
+      <Image
+        source={require('./assets/keilo.png')} // Add your image in the assets folder
+        style={styles.logo}
+      />
+      <TouchableOpacity style={styles.imageButton} onPress={() => console.log('Button Pressed')}>
+        <Image
+          source={require('./assets/bbb2.png')} // Add your image in the assets folder
+          style={styles.imageButtonImage}
+        />
+      </TouchableOpacity>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  screen1: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#f3f3f3',
+  },
+  logo: {
+    width: 200,
+    height: 200,
+    resizeMode: 'contain',
+  },
+  imageButton: {
+    marginTop: 20,
+  },
+  imageButtonImage: {
+    width: 70,
+    height: 70,
+    resizeMode: 'contain',
+  },
+});
 
 export default App;
